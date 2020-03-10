@@ -1,0 +1,22 @@
+body{ padding-top: 70px; }
+@media screen and (max-width: 768px) {
+    body { padding-top: 0px; }
+}
+#av_background {
+    height:300px;
+    width:240px;
+    background-image: url("https://graphics.gaiaonline.com/images/gaia_global/body/avatar/il_dressing_room_240x300.jpg");
+    background-repeat: no-repeat;
+    background-size: 240px 300px;
+    /* position:relative; */
+   
+}
+
+#avatarImg {
+    width:120px;
+    height:170px;
+    
+    position: absolute;
+    top: 82px;
+    left: 110px;
+}
