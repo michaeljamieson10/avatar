@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avatar</title>
+    <title>DreamSprawl</title>
     <link rel="icon" type="image/png" href="/images-avatar/cleancat-avatar.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/avatar.css">
@@ -86,20 +86,72 @@
                 <div class="container">
                     <div class="row">
                       <div class="col">
-                        <div id="av_background">
-                            <img src="/images-avatar/cleancat-avatar.png" id="avatarImg" alt="">
+                       <div class= "theRealAvatar">
+                           <!-- 1. Left Arm must go ontop -->
+                           <img src="/images/avatar/arm-left/la-default.png" id="userLeftArm" alt="">
+                           <!-- 2. Torso -->
+                           <img src="/images/avatar/torso/torso-female.png" id="userTorso" alt="">
+                           <!-- 3. Legs second-->
+                           <img src="/images/avatar/legs/l-heel.png" id="userLegs"alt="">
+                           <img src="/images/avatar/head/h-t-blush.png" id="userHead"alt="">
+                           <!-- 4. Right -->
+                           <img src="/images/avatar/arm-right/ra-default.png" id="userRightArm"alt="">
+                        </div>
+                    </div>
+                      <div class="col-6 body-icon" >
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                            <a class="nav-link active" id="body-tab" data-toggle="tab" href="#body" role="tab" aria-controls="body" aria-selected="true">Body</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" id="legs-tab" data-toggle="tab" href="#legs" role="tab" aria-controls="legs" aria-selected="false">Legs</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" id="right-arm-tab" data-toggle="tab" href="#right-arm" role="tab" aria-controls="right-arm" aria-selected="false">Right Arm</a>
+                            <li class="nav-item">
+                            <a class="nav-link" id="left-arm-tab" data-toggle="tab" href="#left-arm" role="tab" aria-controls="left-arm" aria-selected="false">Left Arm</a>
+                            <li class="nav-item">
+                            <a class="nav-link" id="head-tab" data-toggle="tab" href="#head" role="tab" aria-controls="head" aria-selected="false">Head</a>
+                            </li>
+                        </ul>
+                        <div class="body-icon tab-pane fade show active" id="body" role="tabpanel" aria-labelledby="body-tab">
+                            <img src="/images/tan-regularbase-breakdown-button/body/torso-male.png"  alt="">
+                            <img src="/images/tan-regularbase-breakdown-button/body/torso-female.png"  alt="">
+                        </div>  
+                        <div class="body-icon tab-pane fade" id="legs" role="tabpanel" aria-labelledby="legs-tab">
+                              <!-- <img src="/images/tan-regularbase-breakdown-button/head-3.png"  alt=""> head not available in avatar format -->
+                              <img src="/images/tan-regularbase-breakdown-button/legs/l-heel.png"  alt="">
+                              <img src="/images/tan-regularbase-breakdown-button/legs/l-default.png"  alt="">
+                             
+                        </div>    
+                        <div class="body-icon tab-pane fade" id="right-arm" role="tabpanel" aria-labelledby="right-arm-tab">
+                            <img src="/images/tan-regularbase-breakdown-button/arm-right/ra-default.png"  alt="">
+                            <img src="/images/tan-regularbase-breakdown-button/arm-right/ra-bent.png"  alt="">
+                        </div>
+                        <div class="body-icon tab-pane fade" id="left-arm" role="tabpanel" aria-labelledby="left-arm-tab">
+                            <img src="/images/tan-regularbase-breakdown-button/arm-left/la-default.png"  alt="">
+                            <img src="/images/tan-regularbase-breakdown-button/arm-left/la-bent.png"  alt="">
+                        </div>
+                        <div class="body-icon tab-pane fade" id="head" role="tabpanel" aria-labelledby="head-tab">
+                            <img src="/images/tan-regularbase-breakdown-button/head/h-t-blush.png"  alt="">
+                            <img src="/images/tan-regularbase-breakdown-button/head/h-male.png"  alt="">
                         </div>
 
-                    </div>
-                      <div class="col-6">
-                        2 of 3 (wider)
+                            
+
                       </div>
                       <div class="col">
-                        3 of 3
+                       
                       </div>
                     </div>
             </div>
         </div>
+       
+        <!-- <div class="tab-pane fade" id="legs" role="tabpanel" aria-labelledby="legs-tab">
+
+        </div> -->
+            
+
 
             <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="profile-tab">
                 <img src="data:image/png;base64,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" alt="">
@@ -112,6 +164,9 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!-- my js file UI -->
+<script type="text/javascript" src="ui.js"></script>
 
 </body>
 </html>
